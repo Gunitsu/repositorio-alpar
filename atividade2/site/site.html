@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucian - O Purificador</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img class="background-image" src="images/Lucian_5.jpg" alt="Imagem de fundo do cabeçalho">
+    <img class="overlay-image" src="images/Lucian_5.jpg" alt="Imagem sobreposta do cabeçalho">
+    <img class="secondary-image" src="images/image.png" alt="Segunda imagem sobreposta do cabeçalho">
+    <h1>Lucian - O Purificador</h1>
+    <nav>
+      <ul>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#skins">Skins</a></li>
+        <li><a href="https://br.op.gg/champion/lucian/statistics" target="_blank">Builds no op.gg</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="habilidades-container">
+      <div class="habilidade" onclick="toggleVideo('video1')">
+        <img src="images/Lucian_Passive.png" alt="Ícone do P">
+        <p><strong>Passiva: DISPARO ILUMINADO</strong></p>
+        Sempre que Lucian usa uma Habilidade, seu próximo Ataque se transforma em um disparo duplo.<br>
+        Quando Lucian é curado ou protegido por um aliado, ou quando um Campeão inimigo próximo é imobilizado,<br>
+        os próximos dois Ataques básicos dele causam Dano Mágico adicional.</p>
+      </div>
+
+      <div class="habilidade" onclick="toggleVideo('video2')">
+        <img src="images/LucianQ.png" alt="Ícone do Q">
+        <p><strong>Q: LUZ PERFURANTE</strong></p>
+        <p>Lucian faz um disparo de luz perfurante através de um alvo.</p>
+      </div>
+
+      <div class="habilidade" onclick="toggleVideo('video3')">
+        <img src="images/LucianW.png" alt="Ícone do W">
+        <p><strong>W: CHAMA ARDENTE</strong></p>
+        <p>Lucian dispara um projétil que explode em formato de estrela, marcando e revelando brevemente os inimigos.<br>
+        Ele recebe Velocidade de Movimento por atacar inimigos marcados.</p>
+      </div>
+
+      <div class="habilidade" onclick="toggleVideo('video4')">
+        <img src="images/LucianE.png" alt="Ícone do E">
+        <p><strong>E: PERSEGUIÇÃO IMPLACÁVEL</strong></p>
+        <p>Lucian avança rapidamente uma curta distância. Disparo Iluminado reduz o Tempo de Recarga de Perseguição Implacável.</p>
+      </div>
+
+      <div class="habilidade" onclick="toggleVideo('video5')">
+        <img src="images/LucianR.png" alt="Ícone do R">
+        <p><strong>R: O EXPURGO</strong></p>
+        <p>Lucian desfere uma torrente de disparos de suas armas.</p>
+      </div>
+    </div>
+
+    <video id="video1" controls style="display: none;">
+      <source src="media/ability_0236_P1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <video id="video2" controls style="display: none;">
+      <source src="media/ability_0236_Q1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <video id="video3" controls style="display: none;">
+      <source src="media/ability_0236_W1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <video id="video4" controls style="display: none;">
+      <source src="media/ability_0236_E1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <video id="video5" controls style="display: none;">
+      <source src="media/ability_0236_R1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="historia">
+    <h2>História/Lore</h2>
+    <p>Lucian, um Sentinela da Luz, é um caçador de espíritos imortais<br>
+      que usa suas pistolas relicárias para persegui-los implacavelmente e, por fim, aniquilá-los.<br>
+      Após o assassinato de sua esposa pelas mãos do espectro Thresh, Lucian embarcou em uma jornada de vingança.<br>
+      Mas mesmo com a volta de sua amada ao reino dos vivos, sua ira permanece inalterada.<br>
+      Impiedoso e obstinado, Lucian não hesitará em proteger os vivos contra os horrores da Névoa Negra.</p>
+  </section>
+
+  <section id="skins">
+    <h2>Escolha uma Skin:</h2>
+    <div class="skin-selector">
+      <div class="skin" onclick="selectSkin('Lucian_0.jpg')">
+        <img src="images/Lucian_0.jpg" alt="Lucian" title="Lucian">
+        <p>Lucian Padrão</p>
+      </div>
+      <div class="skin" onclick="selectSkin('Lucian_1.jpg')">
+        <img src="images/Lucian_1.jpg" alt="Lucian Mercenário" title="Lucian Mercenário">
+        <p>Lucian Mercenário</p>
+      </div>
+      <div class="skin" onclick="selectSkin('Lucian_3.jpg')">
+        <img src="images/Lucian_3.jpg" alt="Lucian Projeto" title="Lucian Projeto">
+        <p>Lucian Projeto</p>
+      </div>
+      <div class="skin" onclick="selectSkin('Lucian_7.jpg')">
+        <img src="images/Lucian_7.jpg" alt="Lucian Pulsefire" title="Lucian Pulsefire">
+        <p>Lucian Pulsefire</p>
+      </div>
+      <div class="skin" onclick="selectSkin('Lucian_5.jpg')">
+        <img src="images/Lucian_5.jpg" alt="Lucian Velho Oeste" title="Lucian Velho Oeste">
+        <p>Lucian Velho Oeste</p>
+      </div>
+    </div>
+    <div id="current-skin">
+      <!-- Skin atual -->
+      <img id="current-skin-img" src="images/Lucian_0.jpg" alt="Lucian" title="Lucian">
+    </div>
+  </section>
+
+  <footer>
+    <div class="copyright">
+      Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados. Site criado por mim com imagens e conteudo da Riot Games.
+  </div>
+    <img src="images/direitos.png" alt="Ícone do P">
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

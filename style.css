@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B; /* Cor de fundo - tom escuro */
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff; /* Cor do texto - branco */
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8; /* Cor do sublinhado - azul */
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff; /* Cor do texto - branco */
+    background-color: #1d4ed8; /* Cor do botão - azul */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #1e40af; /* Cor de destaque ao passar o mouse - azul mais escuro */
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc; /* Cor do texto - cinza claro */
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff; /* Cor do texto - branco */
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc; /* Cor do texto - cinza claro */
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "Gustavo";
+    position: absolute;
+    top: 0;
+    left: -65%;
+    transform: translateX(-50%);
+    font-size: 40rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8; /* Cor do elemento antes da imagem - azul */
+    opacity: 0.3;
+    z-index: -100;
+    font-family: 'Ms Madi', sans-serif;
+}
+
+.header-image{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff; /* Cor do texto - branco */
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a; /* Cor do fundo do cartão - tom escuro */
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 40%;
+}
+
+.features .card:hover{
+    background-color: #323232; /* Cor de destaque ao passar o mouse - tom mais escuro */
+    border-color: #fff; /* Cor da borda ao passar o mouse - branco */
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af; /* Cor de destaque - azul */
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff; /* Cor do texto - branco */
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff; /* Cor do texto - branco */
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc; /* Cor do texto - cinza claro */
+    margin-bottom: 1rem;
+}
+
+.features .card a{
+    color: #fff; /* Cor do texto - branco */
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: #1e40af; /* Cor de destaque ao passar o mouse - azul mais escuro */
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc; /* Cor do texto - cinza claro */
+}
+
+.project{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project .card{
+    padding: 3rem 2rem;
+    background-color: #27272a; /* Cor do fundo do cartão - tom escuro */
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.project .card:hover{
+    background-color: #323232; /* Cor de destaque ao passar o mouse - tom mais escuro */
+    border-color: #fff; /* Cor da borda ao passar o mouse - branco */
+}
+
+.project .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.project .card h4{
+    margin-bottom: 1rem;
+    color: #fff; /* Cor do texto - branco */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project .card h3{
+    color: #fff; /* Cor do texto - branco */
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff; /* Borda pontilhada branca */
+}
+
+.project .card p{
+    color: #fff; /* Cor do texto - branco */
+    margin-bottom: 0.75rem;
+}
+
+.project .card p i{
+    color: #ccc; /* Cor do texto - cinza claro */
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.project .card button{
+    color: #fff; /* Cor do texto - branco */
+    background-color: transparent;
+    border: 2px solid #fff; /* Borda sólida branca */
+}
+
+.project .card button:hover{
+    background-color: #1e40af; /* Cor de destaque ao passar o mouse - azul mais escuro */
+    border-color: #1e40af; /* Cor da borda ao passar o mouse - azul mais escuro */
+}
+
+.software-card {
+    background-color: #27272a; /* Cor do fundo do card de software */
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 0.5rem; 
+    transition: all 0.3s ease;
+}
+
+.software-card img {
+    width: 100%;
+    height: auto; 
+    border-radius: 15px;
+}
+
+.software-card:hover {
+    background-color: #323232; 
+    border-color: #fff; 
+}
+
+.software-card .content,
+.software-card h4,
+.software-card p,
+.software-card .btn {
+    display: none;
+}
+
+.card2 {
+    background-color: #27272a; /* Cor do fundo do card */
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 1rem; /* Adiciona um espaçamento interno */
+    transition: all 0.3s ease;
+}
+
+.card2 img {
+    width: 100%;
+    height: 150px; /* Garante que a altura seja ajustada automaticamente */
+    border-radius: 15px;
+}
+
+.card2:hover {
+    background-color: #323232; /* Cor de destaque ao passar o mouse */
+    border-color: #fff; /* Cor da borda ao passar o mouse */
+}
+
+.card2 h4 {
+    margin-bottom: 0.5rem;
+    color: #fff; /* Cor do texto */
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card2 p {
+    color: #ccc; /* Cor do texto */
+    margin-bottom: 1rem;
+}
+
+.card2 a {
+    color: #fff; /* Cor dos links */
+    transition: all 0.3s ease;
+}
+
+.card2 a:hover {
+    color: #1e40af; /* Cor do link ao passar o mouse */
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff; /* Cor do texto - branco */
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
