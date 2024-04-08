@@ -213,25 +213,14 @@ main {
 
 /* Estilos para telas maiores que 768px */
 @media screen and (min-width: 768px) {
-  .video {
-    width: 100%; /* Mantém o tamanho normal do vídeo */
-    height: auto;
-    max-width: none; /* Para garantir que o vídeo não ultrapasse o contêiner */
-  }
-  
-  .overlay {
-    display: block; /* Garante que a sobreposição seja visível em telas maiores */
+  .video-container {
+    display: block; /* Garante que o contêiner de vídeo seja visível em telas maiores */
   }
 }
 
 /* Estilos para telas menores que 768px (dispositivos móveis) */
 @media screen and (max-width: 768px) {
-  .video {
-    width: 100%; /* Redimensiona o vídeo para preencher a largura do contêiner */
-    height: auto; /* A altura ajusta automaticamente para manter a proporção */
-  }
-
-  .overlay {
-    display: none; /* Oculta a sobreposição em dispositivos móveis */
+  .video-container {
+    display: none; /* Oculta o contêiner de vídeo em dispositivos móveis */
   }
 }
