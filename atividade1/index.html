@@ -1,220 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Delícia - Cardápio</title>
-    <style>
-        body {
-            font-family: Sans-serif
-        } h2 {
-            font-size: 20px
-        } h2 {
-            font-family: Monospace
-        } h3 {
-            font-size: 15px
-        }  table {
-            margin: 0 auto
-        } .category-divider {
-            border-bottom: 2px solid black
-        } footer a {
-            color: white
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Portfólio Pessoal | AlparRocketProgram</title>
 </head>
+
 <body>
-    <header style="background-color: #2c1404; color: white; text-align: center; padding: 20px 0;">
-        <h1 style="font-family:Monospace">Café Delícia - Cardápio</h1>
-        <img src="logo.png" alt="Logotipo do Café Delícia" width="200">
+
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="#">Início</a></li>
+            <li id="link1" class="link"><a href="#">Softwares</a></li>
+            <li id="link2" class="link"><a href="#">Projetos</a></li>
+            <li id="link3" class="link"><a href="#">Meu refúgio</a></li>
+        </ul>
+        <button class="btn" onclick="window.location.href='https://www.linkedin.com/in/gdopires/'">Contato</button>
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <h4>Portfólio Pessoal</h4>
+            <H1>Olá, eu sou o <span>Gustavo</span>, um analista de dados e atualmente em busca de entrar na área de ServiceNow.</H1>
+            <p>
+                Esse local é meu Portfólio pessoal, feito exclusivamente para os meus trabalhos envolvendo Front-End. Como já está por aqui, clica no meu Github e veja alguns dos meus trabalhos.
+            </p>
+            <button class="btn" onclick="window.location.href='https://github.com/gunitsu'">Github</button>
+        </div>
+        <div class="image">
+            <img src="assets/images/header.png?v=1" alt="Header">
+        </div>
     </header>
 
-    <div style="max-width: 800px; margin: auto; padding: 20px">
-        <p style="font-size: 20px;">Descubra uma experiência irresistível! Explore nosso cardápio repleto de delícias que vão encantar o seu paladar.</p>
-        <ol>
-            <li>
-                <h2>Cafés</h2>
-                <hr class="category-divider">
-                <ul>
-                    <li>
-                        <h3>Café Espresso</h3>
-                        <p>Um tradicional espresso brasileiro.</p>
-                        <p>R$ 8,50</p>
-                    </li>
-                    <li>
-                        <h3>Café com Leite</h3>
-                        <p>Uma combinação perfeita de café forte e leite cremoso.</p>
-                        <p>R$ 7,00</p>
-                    </li>
-                    <li>
-                        <h3>Café Coado</h3>
-                        <p>Um café coado na hora, servido em xícara.</p>
-                        <p>R$ 7,00</p>
-                    </li>
-                    <li>
-                        <h3>Café Gelado</h3>
-                        <p>Um refrescante café gelado, ótimo para dias quentes.</p>
-                        <p>R$ 5,00</p>
-                    </li>
-                    <li>
-                        <h3>Cappuccino</h3>
-                        <p>Uma mistura de espresso, leite vaporizado e espuma de leite.</p>
-                        <p>R$ 6,50</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h2>Bolos</h2>
-                <hr class="category-divider">
-                <ul>
-                    <li>
-                        <h3>Bolo de Chocolate</h3>
-                        <p>Um clássico bolo de chocolate, irresistível para os amantes de chocolate.</p>
-                        <p>R$ 8,00 por fatia</p>
-                    </li>
-                    <li>
-                        <h3>Bolo de Milho</h3>
-                        <p>Um bolo de milho fofinho.</p>
-                        <p>R$ 8,50 por fatia</p>
-                    </li>
-                    <li>
-                        <h3>Bolo de Coco</h3>
-                        <p>Um bolo úmido com sabor refrescante de coco, perfeito para acompanhar um café.</p>
-                        <p>R$ 8,50 por fatia</p>
-                    </li>
-                    <li>
-                        <h3>Bolo de Fubá</h3>
-                        <p>Um bolo de fubá macio, uma verdadeira delícia.</p>
-                        <p>R$ 8,00 por fatia</p>
-                    </li>
-                    <li>
-                        <h3>Brigadeiro</h3>
-                        <p>O clássico, perfeito para satisfazer sua vontade de chocolate.</p>
-                        <p>R$ 6,00 por unidade</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h2>Sanduíches</h2>
-                <hr class="category-divider">
-                <ul>
-                    <li>
-                        <h3>Misto Quente</h3>
-                        <p>Um clássico sanduíche com queijo e presunto, perfeito para qualquer hora do dia.</p>
-                        <p>R$ 12,00</p>
-                    </li>
-                    <li>
-                        <h3>Pão de Queijo</h3>
-                        <p>Deliciosos pãezinhos de queijo, uma especialidade do nosso cafeteria.</p>
-                        <p>R$ 6,00 por porção</p>
-                    </li>
-                    <li>
-                        <h3>Beirute</h3>
-                        <p>Um sanduíche recheado com presunto, queijo, alface, tomate e maionese, uma verdadeira explosão de sabor.</p>
-                        <p>R$ 12,00</p>
-                    </li>
-                    <li>
-                        <h3>Coxinha</h3>
-                        <p>Uma deliciosa coxinha, com recheio de frango cremoso.</p>
-                        <p>R$ 6,00 por unidade</p>
-                    </li>
-                    <li>
-                        <h3>Pastel de Feira</h3>
-                        <p>Um pastel crocante e recheado.</p>
-                        <p>R$ 10,00 por unidade</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h2>Sucos Naturais</h2>
-                <hr class="category-divider">
-                <ul>
-                    <li>
-                        <h3>Suco de Laranja Natural</h3>
-                        <p>Suco feito com laranjas frescas.</p>
-                        <p>R$ 9,00</p>
-                    </li>
-                    <li>
-                        <h3>Suco de Limão Siciliano</h3>
-                        <p>Suco feito com limões sicilianos.</p>
-                        <p>R$ 9,00</p>
-                    </li>
-                    <li>
-                        <h3>Suco de Morango com Hortelã</h3>
-                        <p>Uma mistura de morangos e hortelã.</p>
-                        <p>R$ 9,00</p>
-                    </li>
-                    <li>
-                        <h3>Suco Detox de Abacaxi e Couve</h3>
-                        <p>Uma mistura de abacaxi, couve e um toque de limão.</p>
-                        <p>R$ 8,00</p>
-                    </li>
-                    <li>
-                        <h3>Suco de Manga com Maracujá</h3>
-                        <p>Uma mistura de manga e maracujá.</p>
-                        <p>R$ 9,50</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <h2>Refrigerantes</h2>
-                <hr class="category-divider">
-                <ul>
-                    <li>
-                        <h3>Coca-Cola</h3>
-                        <p>Refrigerante lata 350ml.</p>
-                        <p>R$ 6,00</p>
-                    </li>
-                    <li>
-                        <h3>Guaraná Antarctica</h3>
-                        <p>Refrigerante lata 350ml.</p>
-                        <p>R$ 6,00</p>
-                    </li>
-                    <li>
-                        <h3>Sprite</h3>
-                        <p>Refrigerante lata 350ml.</p>
-                        <p>R$ 6,00</p>
-                    </li>
-                    <li>
-                        <h3>Fanta Laranja</h3>
-                        <p>Refrigerante lata 350ml.</p>
-                        <p>R$ 6,00</p>
-                    </li>
-                    <li>
-                        <h3>Schweppes Citrus</h3>
-                        <p>Refrigerante lata 350ml.</p>
-                        <p>R$ 6,00</p>
-                    </li>
-                </ul>
-            </li>
-        </ol>
+    <section class="container">
+        <h2 class="header">SOFTWARES</h2>
+        <div class="features">
+            <div class="card software-card">
+                <img src="assets/skills/JS.svg?v=1" alt="Software 1">
+                <div class="content">
+            </div>
+        </div>
+        <div class="card software-card">
+            <img src="assets/skills/VS.svg?v=1" alt="Software 2">
+            <div class="content">
+        </div>
+    </div>
+    <div class="card software-card">
+        <img src="assets/skills/HTML.svg?v=1" alt="Software 3">
+        <div class="content">
+    </div>
+</div>
+<div class="card software-card">
+    <img src="assets/skills/CSS.svg?v=1" alt="Software 4">
+    <div class="content">
+</div>
+
+    </section>
+
+    <section class="container">
+        <h2 class="header">PROJETOS</h2>
+        <p class="sub-header">
+            Meus projetos realizados durante o Alpar Rocket Program.
+        </p>
+        <div class="project">
+            <div class="card">
+                <div class="content">
+                    <h4>RP1 - Atividade 1 [HTML] - 27/03/2024</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Criando um repositório/Portfólio pessoal.
+                    </p>
+                </div>
+                <button class="btn" onclick="window.location.href='index.html'">Atividade 1</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>RP1 - Atividade 2 [HTML] - 28/03/2024</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Criando um Site de Cardápio para Cafeteria.
+                    </p>
+                </div>
+                <button class="btn" onclick="window.location.href='atividade2/index.html'">Atividade 2</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>RP1 - Atividade 3 [HTML] - 01/04/2024</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Página de login baseada em League of Legends.
+                    </p>
+                </div>
+                <button class="btn" onclick="window.location.href='atividade3/index.html'">Atividade 3</button>
+            </div>
+        </div>
+        <div class="project">
+            <div class="card">
+                <div class="content">
+                    <h4>RP1 - Atividade 4 [HTML] - 03/04/2024</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Criando um site de podcast. 
+                    </p>
+                </div>
+                <button class="btn" onclick="window.location.href='atividade4/index.html'">Atividade 4</button>
+            </div>
+    </section>
+
+    <section class="container">
+        <h2 class="header">MEU REFÚGIO</h2>
+        <div class="features">
+            <div class="card2">
+                <img src="assets/images/darksouls.jpg?v=1" alt="ds">
+            </p>
+                <h4>Games</h4>
+                <p>
+                    Amante dos desafios virtuais, mergulho nos intricados mundos de Dark Souls em busca de superação.
+                </p>
+            </div>
+            <div class="card2">
+                <img src="assets/images/ghost.png?v=1" alt="ghost">
+            </p>
+                <h4>Rock</h4>
+                <p>
+                    Os acordes místicos da banda Ghost ressoam profundamente em minha alma, guiando minha jornada musical.
+                </p>
+            </div>
+            <div class="card2">
+                <img src="assets/images/fc.jpg?v=1" alt="fc">
+            </p>
+                <h4>Ficção Científica</h4>
+                <p>
+                    Explorar os horizontes infinitos da ficção científica é minha paixão, com Jogador Número 1 sendo meu refúgio favorito nesse universo de possibilidades.
+                </p>
+            </div>
+            <div class="card2">
+                <img src="assets/images/anime_jpg?v=1" alt="anime">
+            </p>
+                <h4>Animes</h4>
+                <p>
+                    Épica jornada dos irmãos Elric em Fullmetal Alchemist, uma saga que me envolve e inspira em cada episódio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.
     </div>
 
-    <div style="max-width: 800px; margin: auto; padding: 20px">
-    <hr class="category-divider">
-    <h2 style="text-align: center">Horário de Funcionamento</h2>
-        <table border="1">
-            <tr>
-                <th>Dia</th>
-                <th>Horário</th>
-            </tr>
-            <tr>
-                <td>Segunda - Sexta</td>
-                <td>8:00 - 18:00</td>
-            </tr>
-            <tr>
-                <td>Sábado</td>
-                <td>8:00 - 12:00</td>
-            </tr>
-            <tr>
-                <td>Domingo</td>
-                <td>Fechado</td>
-            </tr>
-        </table>
-    </div>
 
-    <footer style="background-color: #333; color: white; text-align: center; padding: 40px 0; width: 100%;">
-        <p>Contato: Endereço do Café Delícia, Telefone: 11 9 1234-5678</p>
-        <p>Siga-nos nas redes sociais: <a href="https://www.linkedin.com/in/gdopires/" style="color: white;">Linkedin</a></p>
-    </footer>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
