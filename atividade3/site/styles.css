@@ -233,3 +233,89 @@ section:not(:first-child) {
   border-top: 2px solid #ff9000;
   padding-top: 20px;
 }
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+  .habilidades-container {
+      flex-direction: column; /* Altera para disposição vertical */
+      align-items: center; /* Centraliza as habilidades verticalmente */
+  }
+
+  .habilidade {
+      margin: 10px 0; /* Espaçamento entre as habilidades */
+      position: relative; /* Adicionado para posicionar a descrição */
+  }
+
+  .habilidade img {
+      width: 60px; /* Reduz o tamanho dos ícones de habilidades */
+      height: 60px;
+      margin-bottom: 10px; /* Espaço entre os ícones e as descrições */
+  }
+
+  .descricao {
+      position: static; /* Alterado para posição padrão */
+      transform: none; /* Remove a transformação */
+      width: auto; /* Ajusta a largura automaticamente */
+      background-color: transparent; /* Remove o fundo */
+      padding: 0; /* Remove o preenchimento */
+      opacity: 1; /* Garante que a descrição seja visível */
+      margin-top: 5px; /* Espaço entre as descrições */
+      text-align: center; /* Centraliza o texto */
+  }
+
+  /* Reduz o tamanho da imagem de direitos autorais */
+  .copyright {
+    width: 50%; /* Define a largura para 50% */
+    max-width: 200px; /* Define a largura máxima */
+    margin: 0 auto 20px; /* Centraliza a imagem com uma margem inferior */
+}
+
+/* Ajusta o layout das skins */
+.skin-selector {
+    flex-direction: column; /* Altera para disposição vertical */
+    align-items: center; /* Centraliza as skins verticalmente */
+}
+
+.skin {
+    margin: 10px 0; /* Espaçamento entre as skins */
+}
+
+.skin img {
+    width: 60px; /* Reduz o tamanho das skins */
+    height: 60px;
+}
+
+footer {
+  padding: 5px; /* Reduz ainda mais o preenchimento */
+}
+
+/* Estilos para o texto de direitos autorais no media query */
+.copyright {
+  font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+}
+
+#current-skin img {
+  width: 400px; /* Reduz o tamanho da imagem da skin selecionada */
+}
+
+/* Estilos para a imagem do ícone de direitos autorais no media query */
+footer img {
+  width: 400px; /* Reduz ainda mais o tamanho da imagem */
+}
+
+  /* Reduz o tamanho dos vídeos */
+  video {
+      width: 90%; /* Largura máxima */
+      max-width: 300px; /* Largura máxima definida */
+      height: auto; /* Altura ajustável */
+      margin: 0 auto; /* Centraliza o vídeo */
+  }
+
+/* Estilos para telas muito pequenas */
+@media screen and (max-width: 480px) {
+  .habilidade img {
+      width: 40px; /* Reduz ainda mais o tamanho dos ícones de habilidades para dispositivos menores */
+      height: 40px;
+  }
+}
+}
