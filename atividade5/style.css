@@ -151,9 +151,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 230px;
-  height: 260px;
-  padding: 0.5em;
+  width: 250px;
+  height: 350px;
+  padding: 1em;
   margin: 1em;
   margin-top: 100px;
   border-radius: 1.5rem;
@@ -238,29 +238,29 @@ main {
 }
 
 .typesContainer {
-  display: flex;
-  align-items: space-between;
+  display: grid; /* Alterado para grid */
+  grid-auto-flow: column; /* Faz com que os itens sejam colocados em colunas automaticamente */
+  gap: 0.5em; /* Adiciona espaço entre os tipos */
+  align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: auto; /* Alterado para auto */
   margin-top: 1em;
   padding: 0.25em;
   position: relative;
-  top: -100px;
+  top: 40px;
 }
 
 .typeDisplay {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: auto;
   padding: 0.5em;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  margin: 0 0.25em;
-  font-family: 'Archivo', sans-serif; 
+  font-family: 'Archivo', sans-serif;
+  min-width: 80px; /* Largura mínima ajustada */
 }
 
 .typeName p {
