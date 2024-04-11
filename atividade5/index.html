@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Pokedex</title>
+    </head>
+    <body class="flexColumnCenter">
+    <header>
+        <div class="container flexRowCenter">
+            <figure class="logo flexRowCenter">
+                <img src="./imgs/logo_small.png" alt="Pokemon logo">
+            </figure>
+            <div class="searchContainer">
+                <input type="text" id="searchInput" placeholder="Pesquisar por ID ou nome">
+                <button id="searchButton">Filtrar</button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Seção para exibir os detalhes do Pokémon -->
+        <div id="pokemonDetails" class="container displayPokemonDetails"></div>
+        <div class="container cards flexRowCenter"></div>
+    
+        <div class="pagination flexRowCenter">
+            <button id="btnFirst">
+                <span><img src="./imgs/first.png" alt="First page" title="First page"></span>
+            </button>
+    
+            <button id="btnPrev">
+                <span><img src="./imgs/prev.png" alt="Previous page" title="Previous page"></span>
+            </button>
+    
+            <span id="paginationText"> Página 1 de 100 </span>
+    
+            <button id="btnNext">
+                <span><img src="./imgs/next.png" alt="Next page" title="Next page"></span>
+            </button>
+    
+            <button id="btnLast">
+                <span><img src="./imgs/last.png" alt="Last page" title="Last page"></span>
+            </button>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container flexRowCenter">
+            <p>
+                <a href="https://www.linkedin.com/in/gdopires/" target="_blank">
+                    Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    </body>
+    </html>
