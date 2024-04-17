@@ -1,14 +1,19 @@
 :root {
 
-  --azul-fluorescente: hsl(0, 100%, 62%);
+  /* cores */
+
+  --azul-fluorescente: hsl(178, 100%, 49%);
   --cinza-heliótropo: hsl(253, 15%, 70%);
-  --violeta-russo: hsl(0, 0%, 17%);
-  --violeta-escuro: hsl(0, 0%, 0%);
+  --violeta-russo: hsl(252, 80%, 16%);
+  --violeta-escuro: hsl(252, 100%, 12%);
   --cadete-espacial: hsl(247, 43%, 20%);
-  --azul-ryb: hsl(0, 100%, 27%);
+  --azul-ryb: hsl(221, 100%, 50%);
   --branco: hsl(0, 0%, 100%);
 
+  --gradiente2: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
   --gradiente: linear-gradient(to right, var(--azul-fluorescente), var(--azul-ryb));
+
+  /* tipografia */
 
   --ff-josefin: 'Josefin sans', sans-serif;
 
@@ -20,8 +25,11 @@
   --fw-500: 500;
   --fw-700: 700;
 
+  /* transição */
 
   --transicao: 0.25s ease-in-out;
+
+  /* espaçamento */
 
   --preenchimento-secao: 30px;
 

@@ -5,7 +5,7 @@ body {
   font-family: 'Lexend Deca', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('wallpaper.svg'); 
+  background-image: url('../media/wallpaper.svg'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
@@ -236,85 +236,90 @@ section:not(:first-child) {
 
 /* Estilos para telas menores */
 @media screen and (max-width: 768px) {
+  .secondary-image {
+    width: 100%; 
+    max-width: none; 
+  }
+  
   .habilidades-container {
-      flex-direction: column; /* Altera para disposição vertical */
-      align-items: center; /* Centraliza as habilidades verticalmente */
+      flex-direction: column;
+      align-items: center; 
   }
 
   .habilidade {
-      margin: 10px 0; /* Espaçamento entre as habilidades */
-      position: relative; /* Adicionado para posicionar a descrição */
+      margin: 10px 0; 
+      position: relative; 
   }
 
   .habilidade img {
-      width: 60px; /* Reduz o tamanho dos ícones de habilidades */
+      width: 60px; 
       height: 60px;
-      margin-bottom: 10px; /* Espaço entre os ícones e as descrições */
+      margin-bottom: 10px; 
   }
 
   .descricao {
-      position: static; /* Alterado para posição padrão */
-      transform: none; /* Remove a transformação */
-      width: auto; /* Ajusta a largura automaticamente */
-      background-color: transparent; /* Remove o fundo */
-      padding: 0; /* Remove o preenchimento */
-      opacity: 1; /* Garante que a descrição seja visível */
-      margin-top: 5px; /* Espaço entre as descrições */
-      text-align: center; /* Centraliza o texto */
+      position: static; 
+      transform: none; 
+      width: auto; 
+      background-color: transparent; 
+      padding: 0; 
+      opacity: 1; 
+      margin-top: 5px; 
+      text-align: center; 
   }
 
   /* Reduz o tamanho da imagem de direitos autorais */
   .copyright {
-    width: 50%; /* Define a largura para 50% */
-    max-width: 200px; /* Define a largura máxima */
-    margin: 0 auto 20px; /* Centraliza a imagem com uma margem inferior */
+    width: 50%; 
+    max-width: 200px; 
+    margin: 0 auto 20px; 
 }
 
 /* Ajusta o layout das skins */
 .skin-selector {
-    flex-direction: column; /* Altera para disposição vertical */
-    align-items: center; /* Centraliza as skins verticalmente */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .skin {
-    margin: 10px 0; /* Espaçamento entre as skins */
+    margin: 10px 0; 
 }
 
 .skin img {
-    width: 60px; /* Reduz o tamanho das skins */
+    width: 60px; 
     height: 60px;
 }
 
 footer {
-  padding: 5px; /* Reduz ainda mais o preenchimento */
+  padding: 5px; 
 }
 
 /* Estilos para o texto de direitos autorais no media query */
 .copyright {
-  font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+  font-size: 12px; 
 }
 
 #current-skin img {
-  width: 400px; /* Reduz o tamanho da imagem da skin selecionada */
+  width: 400px; 
 }
 
 /* Estilos para a imagem do ícone de direitos autorais no media query */
 footer img {
-  width: 400px; /* Reduz ainda mais o tamanho da imagem */
+  width: 400px; 
 }
 
   /* Reduz o tamanho dos vídeos */
   video {
-      width: 90%; /* Largura máxima */
-      max-width: 300px; /* Largura máxima definida */
-      height: auto; /* Altura ajustável */
-      margin: 0 auto; /* Centraliza o vídeo */
+      width: 90%; 
+      max-width: 300px; 
+      height: auto; 
+      margin: 0 auto; 
   }
 
 /* Estilos para telas muito pequenas */
 @media screen and (max-width: 480px) {
   .habilidade img {
-      width: 40px; /* Reduz ainda mais o tamanho dos ícones de habilidades para dispositivos menores */
+      width: 40px; 
       height: 40px;
   }
 }

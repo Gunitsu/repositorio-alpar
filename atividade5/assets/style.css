@@ -57,7 +57,7 @@ html {
 
 body {
   font-family: var(--body-font);
-  background: url('imgs/Wallpaper.jpg') no-repeat center center fixed;
+  background: url('../imgs/Wallpaper.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--accent);
   width: 100vw;
@@ -502,5 +502,28 @@ main {
 }
 
 /*=============== MEDIA QUERIES ===============*/
+/* Dentro do seu media query para telas menores */
+/* Dentro do seu media query para telas menores */
 @media screen and (max-width: 767px) {
+  .searchContainer {
+    position: relative;
+    margin-top: 20px; /* Ajuste conforme necessário para espaçamento entre o filtro e os cards */
+    background: none; /* Remover o fundo se necessário */
+    box-shadow: none; /* Remover a sombra se necessário */
+    border-radius: 0; /* Remover o arredondamento da borda se necessário */
+  }
+
+  .logo {
+    max-width: 200px;
+    margin-bottom: 100px; 
+  }
+
+  .searchContainer {
+    /* Estilos para o search container */
+    position: absolute;
+    top: 130px; /* Coloca o search container abaixo do .logo */
+    left: -125%; /* Coloca o search container no centro horizontal */
+    transform: translateX(-50%); /* Centraliza o search container horizontalmente */
+    max-width: 90%; /* Define a largura máxima */
+  }
 }

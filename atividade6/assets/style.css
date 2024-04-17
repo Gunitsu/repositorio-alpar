@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --linear-gradient: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('wallpaper.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    color: #d1d5db;
+}
+
+.bank-container {
+    background-color: #262626;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bank-container h1 {
+    font-size: 30px;
+    position: relative;
+}
+
+.bank-container h1::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 150px;
+    background: var(--linear-gradient);
+    bottom: 5px;
+}
+
+.bank-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#balance {
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+#total {
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+}
+
+.button {
+    background: var(--linear-gradient);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#amount {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #c8ced6;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.transaction-container {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .bank-container {
+        padding: 20px; 
+    }
+
+    .bank-container h1 {
+        font-size: 24px; 
+    }
+
+    .bank-container h1::before {
+        width: 100px; 
+    }
+
+    .bank-info {
+        gap: 15px; 
+    }
+
+    .button {
+        padding: 8px; 
+        font-size: 16px; 
+    }
+
+    #balance, #total {
+        font-size: 16px; 
+    }
+
+    #amount {
+        font-size: 16px;
+    }
+
+    .transaction-container {
+        max-height: 150px; 
+        padding: 8px; 
+    }
+}
