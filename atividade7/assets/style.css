@@ -32,7 +32,6 @@ header h1 {
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-    border: 2px solid #000;
 }
 
 .room {
@@ -40,16 +39,16 @@ header h1 {
     height: 48%;
     margin-top: 2%;
     position: relative;
-    background: linear-gradient(#1d0633);
-    border: 2px solid #000;
+    background: #000;
+    border: 2px solid #ffffff63;
     overflow: hidden;
 }
 
 .room h2 {
     color: #fff; 
-    margin-top: 10px; 
+    margin-top: 0px; 
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgb(54, 54, 54); 
     padding: 5px 10px; 
 }
 

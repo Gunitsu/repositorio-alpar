@@ -45,7 +45,7 @@ class Room {
         const offButton = button.querySelector('.off');
         const onButton = button.querySelector('.on');
         const statusElement = button.querySelector('.status');
-    
+
         if (status === 'ligada') {
             offButton.style.display = 'none';
             onButton.style.display = 'inline';
@@ -62,14 +62,14 @@ class Room {
     addButtonListener() {
         const button = document.getElementById(this.roomName + 'Button');
         const room = this.roomName;
-    
+
         button.addEventListener('click', () => {
             const lampStatus = this.control.lampStatus[room];
             this.control.toggleLight(room);
-    
+
             // Remove o ouvinte de evento para evitar cliques repetidos até que o estado da lâmpada seja atualizado
             button.removeEventListener('click', handleClick);
-    
+
             // Função para tratar o clique no botão
             function handleClick() {
                 if (lampStatus === 'ligada') {
@@ -79,18 +79,13 @@ class Room {
                     button.classList.remove('off');
                     button.classList.add('on');
                 }
-    
+
                 // Adiciona o ouvinte de evento novamente após o estado da lâmpada ser atualizado
                 button.addEventListener('click', handleClick);
             }
-    
+
             // Chama a função de tratamento do clique no botão
             handleClick();
         });
-    }    
+    }
 }
-
-const livingRoom = new Room(document.getElementById('livingRoom'), 'livingRoom');
-const kitchen = new Room(document.getElementById('kitchen'), 'kitchen');
-const bedroom = new Room(document.getElementById('bedroom'), 'bedroom');
-const bathroom = new Room(document.getElementById('bathroom'), 'bathroom');
