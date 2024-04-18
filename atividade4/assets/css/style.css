@@ -4,8 +4,8 @@
 
   --azul-fluorescente: hsl(178, 100%, 49%);
   --cinza-heliótropo: hsl(253, 15%, 70%);
-  --violeta-russo: hsl(252, 80%, 16%);
-  --violeta-escuro: hsl(252, 100%, 12%);
+  --violeta-russo: hsl(0, 0%, 9%);
+  --violeta-escuro: hsl(0, 0%, 0%);
   --cadete-espacial: hsl(247, 43%, 20%);
   --azul-ryb: hsl(221, 100%, 50%);
   --branco: hsl(0, 0%, 100%);
@@ -83,7 +83,9 @@ html {
 }
 
 body {
-  background: var(--violeta-escuro);
+  background-image: url('../images/wallpaper.jpg');
+    background-size: cover;
+  background-position: center;
   color: var(--branco);
 }
 
@@ -532,6 +534,8 @@ header .container {
   }
 
   .footer-list { margin-bottom: 0; }
+  .footer-bottom {
+    background: var(--violeta-russo)}
 
 }
 

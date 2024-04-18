@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Iluminação</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Controle de Iluminação</h1>
+    </header>
+
+    <main>
+        <div class="house">
+            <div class="room living-room" id="livingRoom">
+                <h2>Sala de Estar</h2>
+                <img src="./img/sala.jpg" alt="Sala de Estar" class="room-image">
+                <img src="./img/desligada.png" alt="Lâmpada Desligada" class="lamp">
+            </div>
+            <div class="room kitchen" id="kitchen">
+                <h2>Cozinha</h2>
+                <img src="./img/cozinha.jpg" alt="Cozinha" class="room-image">
+                <img src="./img/desligada.png" alt="Lâmpada Desligada" class="lamp">
+            </div>
+            <div class="room bedroom" id="bedroom">
+                <h2>Quarto</h2>
+                <img src="./img/quarto.jpg" alt="Quarto" class="room-image">
+                <img src="./img/desligada.png" alt="Lâmpada Desligada" class="lamp">
+            </div>
+            <div class="room bathroom" id="bathroom">
+                <h2>Banheiro</h2>
+                <img src="./img/banheiro.jpg" alt="Banheiro" class="room-image">
+                <img src="./img/desligada.png" alt="Lâmpada Desligada" class="lamp">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="livingRoomButton" class="room-button">
+                <img class="off" src="./img/botao-off.png" alt="Botão Desligado">
+                <img class="on" src="./img/botao-on.png" alt="Botão Ligado">
+                <span class="status"></span>
+            </button>
+            
+            <button id="kitchenButton" class="room-button">
+                <img class="off" src="./img/botao-off.png" alt="Botão Desligado">
+                <img class="on" src="./img/botao-on.png" alt="Botão Ligado">
+                <span class="status"></span>
+            </button>
+            
+            <button id="bedroomButton" class="room-button">
+                <img class="off" src="./img/botao-off.png" alt="Botão Desligado">
+                <img class="on" src="./img/botao-on.png" alt="Botão Ligado">
+                <span class="status"></span>
+            </button>
+            
+            <button id="bathroomButton" class="room-button">
+                <img class="off" src="./img/botao-off.png" alt="Botão Desligado">
+                <img class="on" src="./img/botao-on.png" alt="Botão Ligado">
+                <span class="status"></span>
+            </button>
+        </div>            
+    </main>
+
+    <script src="./assets/iluminação.js"></script>
+</body>
+
+</html>
