@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Meteorológica</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2324bc7f0f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="row">
+                <div class="col-9">
+                    <form>
+                        <input type="text" placeholder="Digite uma cidade" autocomplete="off" class="search-box" id="campo-cidade">
+                        <button type="submit" class="form-btn" id="botao-pesquisar"><i class="fas fa-search"></i></button>
+                        <button type="button" class="form-btn" id="botao-localizacao"><i class="fas fa-location-arrow"></i></button>
+                    </form>
+                </div>
+                <div class="col-3">
+                    <label class="unidade-ativa" id="celsius-label-btn">
+                        <button class="celsius-btn" id="celsius">ºC</button>
+                    </label>
+                    <label class="unidade-alternativa" id="fahrenheit-label-btn">
+                        <button class="fahrenheit-btn" id="fahrenheit">ºF</button>
+                    </label>
+                </div>
+            </div>
+            <h1 id="cidade"></h1>
+            <div class="row">
+                <div class="col date-description">
+                    <span id="data"></span><br>
+                    <span id="descricao-clima"></span>
+                </div>
+                <div class="col">
+                    <img src="" alt="Clima" class="icon" id="icone-clima">
+                </div>
+                <div class="col">
+                    <h2><span class="current-temp" id="temperatura"></span><small class="weather-unit unit">ºC</small></h2>
+                </div>
+            </div>
+            <div class="weather-extra">
+                <ul>
+                    <li>Umidade: <span id="umidade"></span>%</li>
+                    <li>Vento: <span id="vento"></span> km/h</li>
+                </ul>
+            </div>
+            <div class="row hour-forecast" id="previsao"></div>
+        </div>
+        <small class="author">
+            <a href="https://www.linkedin.com/in/gdopires/" alt="Link do Linkedin" target="_blank">Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.</a>
+        </small>
+    </div>
+    <script src="assets/WeatherModel.js"></script>
+    <script src="assets/WeatherController.js"></script>
+    <script src="assets/WeatherView.js"></script>
+</body>
+</html>
