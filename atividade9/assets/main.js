@@ -1,284 +1,187 @@
-//FUNÇÃO PUSH 
+// Funções JavaScript
+// Implemente suas funções aqui
 
-const meuArrayEl = document.getElementById("arrayDisplay")
-let array = [];
-
+// Implementação da função Push
 function push(array, ...items) {
     for (let item of items) {
-        array[array.length] = item;
+      array[array.length] = item;
     }
-    return array.length;
-}
-
-function IncluiPush() {
-
-    let meuValor = document.getElementById("meuInput").value;
-    
-    array.push(meuValor.trim());
-    
-    if(meuValor)
-    {
-        if(!meuArrayEl.innerText)
-        {
-            meuArrayEl.innerText = array.join(" ");
-        }else{
-            meuArrayEl.innerText = array.join(", ");
-        }
-        document.getElementById("meuInput").value = "";
-
-    }else{
-
-    }
-
-}
-
-//FUNÇÃO POP
-
-function pop(array) {
-    if (array.length === 0) {
-        return undefined;
-    }
-    return array.pop();
-}
-
-function execPop() {
-
-    let removedItem = pop(array);
-
-    if (meuArrayEl.innerText) {
-
-        meuArrayEl.innerText = array; 
-        alert("Item removido: " + removedItem); 
-
-    } else {
-
-        alert("O array está vazio!");
-    }
-}
-
-//FUNÇÃO SHIFT
-
-function shift(array) {
-    if (array.length === 0) {
-        return undefined;
-    }
-    return array.shift();
-}
-
-function execShift() {
-
-    let removedItem = shift(array);
-
-    if (meuArrayEl.innerText) {
-
-        meuArrayEl.innerText = array; 
-        alert("Item removido: " + removedItem); 
-
-    } else {
-
-        alert("O array está vazio!");
-    }
-}
-
-//FUNÇÃO UNSHIFT
-
-function unshift(array, ...items) {
-    for (let i = items.length - 1; i >= 0; i--) {
-
-        array.unshift(items[i]);
-    }
-    return array.length;
-}
-
-function execUnShift() {
-
-    if(meuArrayEl.innerText)
-    {
-        let inputValue = document.getElementById("inputUnshift").value; 
-
-        unshift(array, inputValue.trim());
-    
-        meuArrayEl.innerText = array
-        document.getElementById("inputUnshift").value = "";
-    } else {
-
-        alert("O array está vazio!"); 
-        document.getElementById("inputUnshift").value = "";
-    }
-
-}
-
-//FUNÇÃO SLICE
-
-function slice(array, start, end) {
-    return array.slice(start, end);
-}
-
-
-function execSlice() {
-
-    let startValue = parseInt(document.getElementById("initSlice").value);
-    let endValue = parseInt(document.getElementById("endSlice").value); 
-
-    let subarray = slice(array, startValue, endValue); 
-    document.getElementById("subarrayDisplay").innerText = subarray; 
-}
-
-//FUNÇÃO SPLICE
-
-function splice(array, start, deleteCount, ...items) {
-    array.splice(start, deleteCount, ...items);
     return array;
-}
-
-function execSplice() {
-
-
-    if(meuArrayEl.innerText)
-    {
-
-        let inicioSplice = parseInt(document.getElementById("initSplice").value);
-        let quantidadeSplice = parseInt(document.getElementById("qntSplice").value);
-        
-        let novosItens = document.getElementById("newSplice").value.split(",");
-    
-        let newArray = splice(array, inicioSplice, quantidadeSplice, ...novosItens); 
-        document.getElementById("subarrayDisplay2").innerText = newArray;
-
-    } else {
-
-        alert("O array está vazio!"); 
-        document.getElementById("inputUnshift").value = "";
+  }
+  
+  // Implementação da função Pop
+  function pop(array) {
+    if (array.length === 0) return undefined;
+    const removedItem = array[array.length - 1];
+    array.length -= 1;
+    return removedItem;
+  }
+  
+  // Implementação da função Shift
+  function shift(array) {
+    if (array.length === 0) return undefined;
+    const removedItem = array[0];
+    for (let i = 0; i < array.length - 1; i++) {
+      array[i] = array[i + 1];
     }
-
-
-}
-
-//FUNÇÃO FOREACH
-
-function forEach(array, callback, value) {
+    array.length -= 1;
+    return removedItem;
+  }
+  
+  // Implementação da função Unshift
+  function unshift(array, ...items) {
+    const originalLength = array.length;
+    for (let i = array.length + items.length - 1; i >= items.length; i--) {
+      array[i] = array[i - items.length];
+    }
+    for (let i = 0; i < items.length; i++) {
+      array[i] = items[i];
+    }
+    return array;
+  }
+  
+  // Implementação da função Slice
+  function slice(array, indexStart, indexEnd) {
+    const newArray = [];
+    const start = indexStart || 0;
+    const end = indexEnd || array.length;
+    for (let i = start; i < end; i++) {
+      newArray.push(array[i]);
+    }
+    return newArray;
+  }
+  
+  // Implementação da função Splice
+  function splice(array, indexStart, deleteCount, ...itemsToAdd) {
+    const removedItems = [];
+    const start = indexStart < 0 ? Math.max(array.length + indexStart, 0) : Math.min(indexStart, array.length);
+    const count = Math.min(Math.max(deleteCount, 0), array.length - start);
+  
+    for (let i = start; i < start + count; i++) {
+      removedItems.push(array[i]);
+    }
+  
+    const itemsToAddCount = itemsToAdd.length;
+    const newLength = array.length - count + itemsToAddCount;
+  
+    for (let i = array.length - 1; i >= start + count; i--) {
+      array[i + itemsToAddCount] = array[i];
+    }
+  
+    for (let i = 0; i < itemsToAddCount; i++) {
+      array[start + i] = itemsToAdd[i];
+    }
+  
+    array.length = newLength;
+    return removedItems;
+  }
+  
+  // Implementação da função ForEach
+  function forEach(array, callback) {
     for (let i = 0; i < array.length; i++) {
-        callback(array[i], i, array, value);
+      callback(array[i]);
     }
-}
-
-function addValueToElement(element, index, array, value) {
-    array[index] = element + value;
-}
-
-function forEachArray() {
-
-    if(meuArrayEl.innerText)
-    {
-        let value = document.getElementById("novoElemento").value;
-
-        forEach(array, addValueToElement, value); 
-    
-        document.getElementById("arrayForEach").innerText = array;
-        document.getElementById("novoElemento").value = "";
-
-    } else {
-
-        alert("O array está vazio!"); 
-        document.getElementById("inputUnshift").value = "";
+  }
+  
+  // Implementação da função Map
+  function map(array, callback) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
+      newArray[i] = callback(array[i]);
     }
-
-}
-
-//FUNÇÃO MAP
-
-function map(array, callback, value) {
-
-    return array.map(function(element) {
-        return callback(element, value);
-    });
-}
-
-function addValueToElement(element, value) {
-    return element + value; 
-}
-
-function execMap() {
-
-    if(meuArrayEl.innerText)
-    {
-        let value = document.getElementById("mapInput").value;
-    
-        let newArray = map(array, addValueToElement, parseInt(value));
-        
-        document.getElementById("arrayMap").innerText = newArray; 
-        document.getElementById("mapInput").value = ""; 
-
-    } else {
-
-        alert("O array está vazio!"); 
-        document.getElementById("inputUnshift").value = "";
+    return newArray;
+  }
+  
+  // Implementação da função Filter
+  function filter(array, callback) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
+      if (callback(array[i])) {
+        newArray.push(array[i]);
+      }
     }
-    
-}
-
-//FUNÇÃO FILTER
-
-function filter(array, callback, value) {
-    return array.filter(function(element) {
-        return callback(element, value);
-    });
-}
-
-function filterElement(element, value) {
-    return element > parseInt(value);
-}
-
-function execFilter() {
-
-    if(meuArrayEl.innerText)
-    {
-
-        let value = document.getElementById("filterInput").value; 
-    
-        let filteredArray = filter(array, filterElement, value); 
-        
-        document.getElementById("arrayFilter").innerText = filteredArray;
-
-    } else {
-
-        alert("O array está vazio!"); 
-        document.getElementById("inputUnshift").value = "";
+    return newArray;
+  }
+  
+  // Implementação da função Reduce
+  function reduce(array, callback, initialAcumulatorValue) {
+    let accumulator = initialAcumulatorValue !== undefined ? initialAcumulatorValue : array[0];
+    const start = initialAcumulatorValue !== undefined ? 0 : 1;
+    for (let i = start; i < array.length; i++) {
+      accumulator = callback(accumulator, array[i]);
     }
-
-
-}
-
-//FUNÇÃO REDUCE
-
-function reduce(array, callback, initialValue) {
-    return array.reduce(function(accumulator, currentValue) {
-        return callback(accumulator, currentValue); 
-    }, initialValue);
-}
-
-function sumValues(accumulator, currentValue) {
-    return accumulator + currentValue; 
-}
-
-function execReduce() {
-
-    if(meuArrayEl.innerText)
-    {
-        
-        let value = document.getElementById("reduceInput").value; 
-    
-        let initialValue = parseInt(value) || 0;
-        
-        let reducedValue = reduce(array.map(Number), sumValues, initialValue); 
-        
-        document.getElementById("arrayReduce").innerText = reducedValue; 
-
-    } else {
-
-        alert("O array está vazio!"); 
-        document.getElementById("inputUnshift").value = "";
-    }
-    
-
-}
+    return accumulator;
+  }
+  
+  // Funções de execução
+  function execPush() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const params = document.getElementById("paramPush").value.split(",");
+    const result = push(arrayInput, ...params);
+    document.getElementById("resultPush").innerText = result.join(", ");
+  }
+  
+  function execPop() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const result = pop(arrayInput);
+    document.getElementById("resultPop").innerText = result;
+  }
+  
+  function execShift() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const result = shift(arrayInput);
+    document.getElementById("resultShift").innerText = result;
+  }
+  
+  function execUnshift() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const params = document.getElementById("paramPush").value.split(",");
+    const result = unshift(arrayInput, ...params);
+    document.getElementById("resultUnshift").innerText = result.join(", ");
+  }
+  
+  function execSlice() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const start = document.getElementById("paramSliceStart").value;
+    const end = document.getElementById("paramSliceEnd").value;
+    const result = slice(arrayInput, start, end);
+    document.getElementById("resultSlice").innerText = result.join(", ");
+  }
+  
+  function execSplice() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const start = document.getElementById("paramSpliceStart").value;
+    const deleteCount = document.getElementById("paramSpliceDeleteCount").value;
+    const itemsToAdd = document.getElementById("paramSpliceItemsToAdd").value.split(",");
+    const result = splice(arrayInput, start, deleteCount, ...itemsToAdd);
+    document.getElementById("resultSplice").innerText = "Itens Removidos: " + result.join(", ") + "\nNovo Array: " + arrayInput.join(", ");
+  }
+  
+  function execForEach() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const param = document.getElementById("paramForEachCallback").value;
+    const result = [];
+    forEach(arrayInput, (item) => result.push(item + param));
+    document.getElementById("resultForEach").innerText = result.join(", ");
+  }
+  
+  function execMap() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const param = document.getElementById("paramMapCallback").value;
+    const result = map(arrayInput, (item) => item + param);
+    document.getElementById("resultMap").innerText = result.join(", ");
+  }
+  
+  function execFilter() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const param = document.getElementById("paramFilterCallback").value;
+    const result = filter(arrayInput, (item) => item.includes(param));
+    document.getElementById("resultFilter").innerText = result.join(", ");
+  }
+  
+  function execReduce() {
+    const arrayInput = document.getElementById("arrayInput").value.split(",");
+    const initialValue = document.getElementById("paramReduceInitial").value;
+    const result = reduce(arrayInput, (acc, item) => parseInt(acc) + parseInt(item), initialValue);
+    document.getElementById("resultReduce").innerText = result;
+  }

@@ -4,77 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Funções Arrays</title>
   <link rel="stylesheet" href="./assets/styles.css">
+  <title>Funções de Arrays</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="func arrayPrincipal">
-      <h2>Função PUSH</h2>
-      <input type="text" id="meuInput" placeholder="Insira um valor">
-      <button onclick="IncluiPush()">Adicionar Item</button>
-      <p class="meu-return">Meu Array: <span id="arrayDisplay"></span></p>
+    <h1>Funções de Arrays</h1>
+
+    <!-- Definição dos Arrays -->
+    <h2>Definição dos Arrays</h2>
+    <div class="param-container">
+      <label for="arrayInput">Defina o array:</label>
+      <input type="text" id="arrayInput" placeholder="Insira os elementos separados por vírgula">
     </div>
-    <div class="meus-buttons">
-      <div class="pop">
-        <h2>Função POP</h2>
-        <button onclick="execPop()">Remover Último Item</button>
-      </div>
-      <div class="shift">
-        <h2>Função SHIFT</h2>
-        <button onclick="execShift()">Remover Primeiro Item</button>
-      </div>
+
+    <!-- Definição dos Parâmetros -->
+    <h2>Definição dos Parâmetros</h2>
+    <div class="param-container">
+      <label for="paramPush">Parâmetros para Push (separe por vírgula):</label>
+      <input type="text" id="paramPush">
+      <button onclick="execPush()">Push</button>
     </div>
-    <div class="func">
-      <h2>Função UNSHIFT</h2>
-      <input type="text" id="inputUnshift" placeholder="Insira um valor">
-      <button onclick="execUnShift()">Adicionar Item no Início</button>
+    <div class="param-container">
+      <label for="paramSliceStart">Índice de Início para Slice:</label>
+      <input type="number" id="paramSliceStart" value="0">
+      <label for="paramSliceEnd">Índice de Fim para Slice:</label>
+      <input type="number" id="paramSliceEnd">
+      <button onclick="execSlice()">Slice</button>
     </div>
-    <div class="func">
-      <h2>Função SLICE</h2>
-      <input type="text" id="initSlice" placeholder="Valor inicial">
-      <input type="text" id="endSlice" placeholder="Valor final">
-      <button onclick="execSlice()">Obter slice</button>
-      <p class="meu-return">Novo array: <span id="subarrayDisplay"></span></p>
+    <div class="param-container">
+      <label for="paramSpliceStart">Índice de Início para Splice:</label>
+      <input type="number" id="paramSpliceStart">
+      <label for="paramSpliceDeleteCount">Quantidade a Deletar para Splice:</label>
+      <input type="number" id="paramSpliceDeleteCount" value="0">
+      <label for="paramSpliceItemsToAdd">Itens a Adicionar para Splice (separe por vírgula):</label>
+      <input type="text" id="paramSpliceItemsToAdd">
+      <button onclick="execSplice()">Splice</button>
     </div>
-    <div class="func">
-      <h2>Função SPLICE</h2>
-      <input type="text" id="initSplice" placeholder="Valor inicial">
-      <input type="text" id="qntSplice" placeholder="Quantidade">
-      <input type="text" id="newSplice" placeholder="Itens a adicionar">
-      <button onclick="execSplice()">Obter splice</button>
-      <p class="meu-return">Novo array: <span id="subarrayDisplay2"></span></p>
+    <div class="param-container">
+      <label for="paramForEachCallback">Parâmetro para Callback do ForEach:</label>
+      <input type="text" id="paramForEachCallback">
+      <button onclick="execForEach()">ForEach</button>
     </div>
-    <div class="func">
-      <h2>Função FOREACH</h2>
-      <p class="meu-return">Meu Array: <span id="arrayForEach"></span></p>
-      <input type="text" id="novoElemento" placeholder="insira um caractere para implementar">
-      <button onclick="forEachArray()">Obter ForEach</button>
+    <div class="param-container">
+      <label for="paramMapCallback">Parâmetro para Callback do Map:</label>
+      <input type="text" id="paramMapCallback">
+      <button onclick="execMap()">Map</button>
     </div>
-    <div class="func">
-      <h2>Função MAP</h2>
-      <p class="meu-return">Novo Array: <span id="arrayMap"></span></p>
-      <input type="text" id="mapInput" placeholder="insira um caractere para implementar">
-      <button onclick="execMap()">Obter Map</button>
+    <div class="param-container">
+      <label for="paramFilterCallback">Parâmetro para Callback do Filter:</label>
+      <input type="text" id="paramFilterCallback">
+      <button onclick="execFilter()">Filter</button>
     </div>
-    <div class="func">
-      <h2>Função FILTER</h2>
-      <p class="meu-return">Novo Array: <span id="arrayFilter"></span></p>
-      <input type="text" id="filterInput" placeholder="insira um valor para filtrar array">
-      <button onclick="execFilter()">Obter Filter</button>
+    <div class="param-container">
+      <label for="paramReduceInitial">Valor Inicial para Reduce:</label>
+      <input type="text" id="paramReduceInitial">
+      <button onclick="execReduce()">Reduce</button>
     </div>
-    <div class="func">
-      <h2>Função REDUCE</h2>
-      <p class="meu-return">Resultado: <span id="arrayReduce"></span></p>
-      <input type="text" id="reduceInput" placeholder="insira um valor para implementar na soma">
-      <button onclick="execReduce()">Obter Reduce</button>
-    </div>
+
+    <h2>Resultados</h2>
+    <p>Resultado de Push: <span id="resultPush"></span></p>
+    <p>Resultado de Pop: <span id="resultPop"></span></p>
+    <p>Resultado de Shift: <span id="resultShift"></span></p>
+    <p>Resultado de Unshift: <span id="resultUnshift"></span></p>
+    <p>Resultado de Slice: <span id="resultSlice"></span></p>
+    <p>Resultado de Splice: <span id="resultSplice"></span></p>
+    <p>Resultado de ForEach: <span id="resultForEach"></span></p>
+    <p>Resultado de Map: <span id="resultMap"></span></p>
+    <p>Resultado de Filter: <span id="resultFilter"></span></p>
+    <p>Resultado de Reduce: <span id="resultReduce"></span></p>
   </div>
 
-  <footer>
-    <p>Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.</p>
-  </footer>
+  <div class="footer">
+    Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.
+</div>
 
   <script src="./assets/main.js"></script>
 </body>
