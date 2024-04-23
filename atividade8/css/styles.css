@@ -179,3 +179,17 @@ body {
 #suggestions button:hover {
   opacity: 1;
 }
+
+.container {
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px; /* ou o valor desejado para a distância entre os direitos autorais e o rodapé */
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}

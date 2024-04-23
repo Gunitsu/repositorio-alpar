@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções Arrays</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="func arrayPrincipal">
+      <h2>Função PUSH</h2>
+      <input type="text" id="meuInput" placeholder="Insira um valor">
+      <button onclick="IncluiPush()">Adicionar Item</button>
+      <p class="meu-return">Meu Array: <span id="arrayDisplay"></span></p>
+    </div>
+    <div class="meus-buttons">
+      <div class="pop">
+        <h2>Função POP</h2>
+        <button onclick="execPop()">Remover Último Item</button>
+      </div>
+      <div class="shift">
+        <h2>Função SHIFT</h2>
+        <button onclick="execShift()">Remover Primeiro Item</button>
+      </div>
+    </div>
+    <div class="func">
+      <h2>Função UNSHIFT</h2>
+      <input type="text" id="inputUnshift" placeholder="Insira um valor">
+      <button onclick="execUnShift()">Adicionar Item no Início</button>
+    </div>
+    <div class="func">
+      <h2>Função SLICE</h2>
+      <input type="text" id="initSlice" placeholder="Valor inicial">
+      <input type="text" id="endSlice" placeholder="Valor final">
+      <button onclick="execSlice()">Obter slice</button>
+      <p class="meu-return">Novo array: <span id="subarrayDisplay"></span></p>
+    </div>
+    <div class="func">
+      <h2>Função SPLICE</h2>
+      <input type="text" id="initSplice" placeholder="Valor inicial">
+      <input type="text" id="qntSplice" placeholder="Quantidade">
+      <input type="text" id="newSplice" placeholder="Itens a adicionar">
+      <button onclick="execSplice()">Obter splice</button>
+      <p class="meu-return">Novo array: <span id="subarrayDisplay2"></span></p>
+    </div>
+    <div class="func">
+      <h2>Função FOREACH</h2>
+      <p class="meu-return">Meu Array: <span id="arrayForEach"></span></p>
+      <input type="text" id="novoElemento" placeholder="insira um caractere para implementar">
+      <button onclick="forEachArray()">Obter ForEach</button>
+    </div>
+    <div class="func">
+      <h2>Função MAP</h2>
+      <p class="meu-return">Novo Array: <span id="arrayMap"></span></p>
+      <input type="text" id="mapInput" placeholder="insira um caractere para implementar">
+      <button onclick="execMap()">Obter Map</button>
+    </div>
+    <div class="func">
+      <h2>Função FILTER</h2>
+      <p class="meu-return">Novo Array: <span id="arrayFilter"></span></p>
+      <input type="text" id="filterInput" placeholder="insira um valor para filtrar array">
+      <button onclick="execFilter()">Obter Filter</button>
+    </div>
+    <div class="func">
+      <h2>Função REDUCE</h2>
+      <p class="meu-return">Resultado: <span id="arrayReduce"></span></p>
+      <input type="text" id="reduceInput" placeholder="insira um valor para implementar na soma">
+      <button onclick="execReduce()">Obter Reduce</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.</p>
+  </footer>
+
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
