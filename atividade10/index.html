@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Todo app</title>
+</head>
+<body>
+
+    <header>
+        <h1>Todo App</h1>
+    </header>
+    <form action="">
+        <input type="text" class="todo-input" placeholder="Digite a tarefa...">
+        <input type="time" class="todo-time">
+        <button class="todo-button" type="button" onclick="toggleTimeInput()">
+            <p>Adicionar</p>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">Todos</option>
+                <option value="completed">Concluídos</option>
+                <option value="incomplete">Incompletos</option>
+            </select>
+        </div>
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+
+    <div class="footer">
+        Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.
+    </div>
+    
+    <script src="./assets/script.js"></script>
+    
+</body>
+</html>

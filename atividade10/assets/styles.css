@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --linear-gradient: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151515;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+header h1 {
+    background: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: -550px; 
+    margin-bottom: -350px; 
+}
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: rgb(46, 46, 46);
+    border-radius: 2rem;
+}
+
+form button {
+    color: rgb(255, 255, 255);
+    background: rgb(46, 46, 46);
+    cursor: pointer;
+    transition: all 0.3 ease;
+    margin-left: 0.5rem;
+}
+
+form button:hover {
+    color: white;
+    background: rgb(59, 148, 100);
+}
+
+.fa-plus-circle {
+    margin-top: 0.3rem;
+    margin-left: -8px;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 15%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: rgb(46, 46, 46);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.complete-btn {
+    background: rgb(59, 148, 100);
+}
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: rgb(176, 60, 60);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+.todo-time {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: rgb(46, 46, 46);
+    border-radius: 2rem;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+select {
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 46, 46);
+    font-size: 1rem;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\27A4";
+    position: absolute;
+    background:linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
+    top: -3px;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem; 
+        margin-left: -300px; 
+        margin-bottom: -200px; 
+    }
+
+    header {
+        margin-top: 20px;
+    }
+
+    form input,
+    form button,
+    .todo-time,
+    select {
+        width: calc(80% - 20px); 
+        margin: 5px 0; 
+        padding: 0.5rem;
+        font-size: 1rem; 
+        box-sizing: border-box; 
+    }
+
+    form button,
+    .select {
+        padding: 0.5rem; 
+        font-size: 1rem; 
+        width: 80%; 
+        margin-bottom: 5px; 
+        background-color: rgb(46, 46, 46); 
+        color: white; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+    }
+
+    form {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .select {
+        margin: 5px 0;
+        position: relative; 
+    }
+
+    .select::after {
+        position: absolute;
+        top: 50%;
+        right: 10px; 
+        transform: translateY(-50%); 
+        pointer-events: none;
+        display: none;
+    }
+}
