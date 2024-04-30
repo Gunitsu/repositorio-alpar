@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="book-app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Biblioteca Digital</title>
+</head>
+
+<body ng-controller="BookController">
+    <div class="container">
+        <div class="header">
+            <h1 ng-bind="title"></h1>
+        </div>
+
+        <label class="add-book">
+            <div class="name-book inputStyle">
+                <input type="text" ng-model="bookName" placeholder="Título...">
+            </div>
+            <div class="autor-book inputStyle">
+                <input type="text" ng-model="autorName" placeholder="Autor da Obra...">
+            </div>
+            <div class="year-book inputStyle">
+                <input type="text" ng-model="yearBook" placeholder="Ano de publicação...">
+            </div>
+            <button type="button" ng-click="addBook()"><i class="fas fa-plus-circle"></i></button>
+        </label>
+
+        <div class="meus-livros">
+            <div class="book-list">
+                <div class="book" ng-repeat="book in bookList">
+                    <i class="fas fa-book"></i>
+                    <p>{{ book.name }}</p>
+                    <p>{{ book.autor }}</p>
+                    <p>{{ book.year }}</p>
+                    <button ng-click="deleteBook(book.id)"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+
+            <p ng-if="bookList.length == 0" class="no-books">Nenhum livro cadastrado...</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Direitos Autorais © 2024 Gustavo Pires. Todos os Direitos Reservados.
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
