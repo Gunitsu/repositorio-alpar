@@ -10,7 +10,7 @@ app.controller('BookController', ($scope, $http)=>{
 
     $scope.addBook = () => {
         if(!$scope.bookName){
-            return alert('Digite um titulo para o próximo livro!')
+            return alert('Digite um titulo para o livro!')
         }
 
         $http.post('http://localhost:8080/api/books', 
@@ -18,7 +18,7 @@ app.controller('BookController', ($scope, $http)=>{
         ).then(()=>{
             $scope.loadBookList()
         }, () => {
-            alert("Ops, aconteceu algum erro!")
+            alert("Houve um erro!")
         })
     }
 
@@ -27,7 +27,7 @@ app.controller('BookController', ($scope, $http)=>{
             $scope.loadBookList()
         }, (error) => {
             console.error("Erro ao excluir o livro:", error);
-            alert("Ops, aconteceu algum erro ao excluir o livro!")
+            alert("Erro ao excluir o livro!")
         })
     }    
 
